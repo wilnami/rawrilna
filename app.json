@@ -1,6 +1,6 @@
 {
-  "name": "⚡𝗚𝗲𝗲𝘇 𝙐𝙎𝙀𝙍𝘽𝙊𝙏⚡",
-  "description": "🚫Geez-UserBot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "rawrilna",
+  "description": "wilna rawr",
   "logo": "",
   "keywords": [
     "telegram",
@@ -9,8 +9,8 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/vckyou/Geez-UserBot",
-  "telegram": "https://t.me/VckyouuBitch",
+  "repository": "https://github.com/wilnami/rawrilna",
+  "telegram": "https://t.me/wilnami",
   "success_url": "https://t.me/GeezSupportGroup",
   "stack": "container",
   "env": {

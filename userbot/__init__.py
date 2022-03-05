@@ -374,7 +374,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**GeezProjects v{BOT_VER} Sedang berjalan!**\n\n"
+        f"**rawrilna v{BOT_VER} sedang berjalan!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {DEFAULTUSER}"
@@ -468,11 +468,7 @@ with bot:
         async def handler(event):
             await event.message.get_sender()
             text = (
-                f"**Hey**, __I am using__  **GeezUserbot** \n\n"
-                f"       __Thanks For Using me__\n\n"
-                f" **Group Support :** [GEEZ](t.me/GeezSupport)\n"
-                f" **Owner Repo :** [Vicky](t.me/vckyaz)\n"
-                f" **Repo :** [GeezProjects](https://github.com/vckyou/Geez-Userbot)\n"
+                f"**rawrilna**, __memanglah__  **terbaiks** \n\n"
             )
             await tgbot.send_file(
                 event.chat_id,
@@ -481,8 +477,8 @@ with bot:
                 buttons=[
                     [
                         custom.Button.url(
-                            text="REPO GEEZ-USERBOT",
-                            url="https://github.com/vckyou/Geez-Userbot",
+                            text="REPO RAWRILNA",
+                            url="https://github.com/wilnami/rawrilna",
                         )
                     ],
                     [
@@ -506,7 +502,7 @@ with bot:
                 result = builder.photo(
                     file=geezlogo,
                     link_preview=False,
-                    text=f"**Inline In GeezProjects**\n\n⛑️ **Owner** [Vicky](t.me/vckyaz)\n**Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**Inline In RAWRILNA**\n\n⛑️ **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -550,7 +546,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**GeezProjects Inline Menu**\n\n🔸 **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Module"
+                text = f"**RAWRILNA Inline Menu**\n\n🔸 **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Module"
                 await event.edit(
                     text,
                     file=geezlogo,
@@ -558,7 +554,7 @@ with bot:
                     link_preview=False,
                 )
             else:
-                reply_pop_up_alert = f"Kamu Tidak diizinkan, ini Userbot Milik {owner}"
+                reply_pop_up_alert = f"mau ngapain banh"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
@@ -576,7 +572,7 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari GeezProjects ",
+                    "Bantuan Dari RAWRILNA ",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True)
