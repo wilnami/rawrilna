@@ -1,9 +1,9 @@
 FROM vckyouuu/geezprojects:buster
 
-RUN git clone -b rawrilna https://github.com/wilnami/rawrilna /root/rawrilna
-RUN mkdir /root/rawrilna/.bin
+RUN git clone -b rawrilna https://github.com/wilnami/rawrilna /root/userbot
+RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 
-WORKDIR /root/rawrilna
+WORKDIR /root/userbot
 
-CMD ["python3", "-m", "rawrilna"]
+CMD ["python3", "-m", "userbot"]
