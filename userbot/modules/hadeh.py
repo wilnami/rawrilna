@@ -12,7 +12,7 @@ loop = asyncio.get_event_loop()
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`selamat anda telah...`")
-    // terus jeda 5 detik
+    # terus jeda 5 detik
     await loop.call_later(2, typew.edit("`mendapat tambahan 1 hadeh`"))
 
 CMD_HELP.update({
