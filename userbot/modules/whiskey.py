@@ -12,7 +12,7 @@ async def typewriter(typew):
     counter = int(typew.pattern_match.group(1).split(' ', 2)[0])
 
     for _ in range(1, counter):
-        await typew.edit("`PV WHISKEY\n\n-WILNA WHISKEY`")
+        await typew.edit("`hadeh WILNA WHISKEY`")
         sleep(1)           
         await typew.edit("`hadeh アルディ 'だ'`")
         sleep(1)           
