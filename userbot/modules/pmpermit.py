@@ -29,7 +29,7 @@ from platform import uname
 # ========================= CONSTANTS ============================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
-DEF_UNAPPROVED_MSG =  "{DEFAULTUSER} lagi tidur 🗿"
+DEF_UNAPPROVED_MSG =  "wilna lagi tidur 🗿"
 # =================================================================
 
 
@@ -87,7 +87,7 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 5:
                 await event.respond(
-                    "`dadah :v`"
+                    "dadah :v"
                 )
 
                 try:
@@ -228,7 +228,7 @@ async def approvepm(apprvpm):
     except IntegrityError:
         return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
 
-    await apprvpm.edit(f"`hai` [{name0}](tg://user?id={uid}) `pesan kamu sudah diterima:v 😎`")
+    await apprvpm.edit(f"hai [{name0}](tg://user?id={uid}) pesan kamu sudah diterima:v")
     await apprvpm.delete(getmsg)
     await message.delete()
 
@@ -396,7 +396,7 @@ async def permitpm(event):
 
 CMD_HELP.update(
     {
-        "pmpermit": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.setuju | .ok`"
+        "pmpermit": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.setuju | .ok | .hadehserahlu`"
         "\n↳ : Menerima pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
         "\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: >`.tolak | .nopm`"
         "\n↳ : Menolak pesan seseorang dengan cara balas pesannya atau tag dan juga untuk dilakukan di pm."
