@@ -22,6 +22,7 @@ from markdown import markdown
 from dotenv import load_dotenv
 from requests import get
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
+from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.sync import TelegramClient, custom, events
 from telethon.sessions import StringSession
 from telethon import Button, events, functions, types
@@ -397,11 +398,12 @@ except AttributeError:
     pass
 
 
-if not BOT_TOKEN is None:
+if BOT_TOKEN is not None:
     tgbot = TelegramClient(
         "TG_BOT_TOKEN",
         api_id=API_KEY,
         api_hash=API_HASH,
+        connection=ConnectionTcpAbridged,
         auto_reconnect=True,
         connection_retries=None,
     ).start(bot_token=BOT_TOKEN)
@@ -456,10 +458,13 @@ def paginate_help(page_number, loaded_modules, prefix):
 
 with bot:
     try:
+        bot(JoinChannelRequest("@UserbotCh"))
+        bot(JoinChannelRequest("@ramsupportt"))
 
         dugmeler = CMD_HELP
         user = bot.get_me()
         uid = user.id
+        owner = user.first_name
         logo = ALIVE_LOGO
         geezlogo = INLINE_PIC
         tgbotusername = BOT_USERNAME
